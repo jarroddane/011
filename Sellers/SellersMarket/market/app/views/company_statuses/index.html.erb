@@ -1,0 +1,18 @@
+<h1>Listing company_statuses</h1>
+
+<table>
+  <tr>
+  </tr>
+
+<% for company_status in @company_statuses %>
+  <tr>
+    <td><%= link_to 'Show', company_status %></td>
+    <td><%= link_to 'Edit', edit_company_status_path(company_status) %></td>
+    <td><%= link_to 'Destroy', company_status, :confirm => 'Are you sure?', :method => :delete %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New company_status', new_company_status_path %>

@@ -1,0 +1,87 @@
+<div id="top-button-area">
+
+
+
+<button align="right">
+	
+	<p>
+	
+		DIY Videos
+	</p>
+			
+	
+</button>
+
+
+
+
+
+<button align="right">
+	
+	
+			<p> Image Gallery
+
+				</p>
+	
+</button>
+
+<button align="right">
+	
+		<p>
+			Podcasts
+		</p>
+				
+	
+</button>
+
+
+
+<button align="right">
+	
+		<p>
+			PDF Whitepapers
+		</p>
+				
+	
+</button>
+<button align="right">
+	
+		<p>
+			Advertisements
+		</p>
+				
+	
+</button>
+
+
+
+</div>
+
+
+<h1>Shop til you drop</h1>
+
+<div align="right">
+
+</div>
+
+
+<% for product in @products -%>
+
+	<div class="display">
+	
+		<%= image_tag(product.image_url) %>
+		
+	
+		<h3><%=h product.label %></h3>
+		
+		<%= product.description %>
+		
+		<span class="price"><%= number_to_currency(product.price) %></span>
+		
+		<% form_remote_tag :url => { :action => 'add_to_basket', :id => product } do %>
+		<%= submit_tag "Add This Product to Your Basket" %>
+		<% end %>
+		
+	</div>
+	
+<% end %>

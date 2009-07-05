@@ -1,0 +1,40 @@
+
+<div class="label-shopping-basket">  Most Popular Products </div>
+<br>
+
+<table> 
+
+<%= render(:partial => "most_popular_products", :collection => @product.count) %>
+
+
+<tr class=""line-sum">
+
+
+<td colspan="2"> Highest Selling Item </td>
+<td class="cell-sum"><%= number_to_currency(@product.count) %></td>
+
+</tr>
+
+<tr class=""line-sum">
+
+
+<td colspan="2"> Most Expensive Product for Sale </td>
+<td class="cell-sum"><%= number_to_currency(@product.count) %></td>
+
+</tr>
+
+<tr class=""line-sum">
+
+
+<td colspan="2"> Cheapest Products </td>
+<td class="cell-sum"><%= number_to_currency(@product.count) %></td>
+
+</tr>
+
+
+</table>
+
+<br>
+
+<%= button_to "See More...", :action => '' %>
+

@@ -1,0 +1,24 @@
+
+<div class="label-shopping-basket">  Your Shopping Basket </div>
+<br>
+
+<table> 
+
+<%= render(:partial => "basket_item", :collection => @basket.items) %>
+
+
+<tr class=""line-sum">
+
+
+<td colspan="2"> Checkout Sum - </td>
+<td class="cell-sum"><%= number_to_currency(@basket.price_sum) %></td>
+
+</tr>
+
+</table>
+
+<br>
+
+<%= button_to "Finish Shopping", :action => 'finish_shopping' %>
+
+<%= button_to "Empty Your Basket", :action => :erase_basket %>

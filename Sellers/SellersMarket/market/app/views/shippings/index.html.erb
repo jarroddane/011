@@ -1,0 +1,39 @@
+<div id="shippings">
+
+<h1>Shipping and Receiving</h1>
+
+</div>
+
+<div id="shippings-index-body-wrapper">
+
+<table align="center">
+  <tr>
+    <th>Name</th>
+    <th>Destination</th>
+    <th>Cost</th>
+    <th>Shipped at</th>
+    <th>Received on</th>
+  </tr>
+
+<% for shipping in @shippings %>
+
+<div class="entry">
+
+  <tr>
+    <td><%=h shipping.name %></td>
+    <td><%=h shipping.location %></td>
+    <td><%=h shipping.cost %></td>
+    <td><%=h shipping.shipped %></td>
+    <td><%=h shipping.received %></td>
+    <td><%= link_to 'Show', shipping %></td>
+    <td><%= link_to 'Edit', edit_shipping_path(shipping) %></td>
+    <td><%= link_to 'Destroy', shipping, :confirm => 'Are you sure?', :method => :delete %></td>
+  </tr>
+</div>
+
+<% end %>
+</table>
+
+</div>
+
+<br />

@@ -1,0 +1,283 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html 
+     PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+     "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+  <title>Class: WarehouseController</title>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <meta http-equiv="Content-Script-Type" content="text/javascript" />
+  <link rel="stylesheet" href=".././rdoc-style.css" type="text/css" media="screen" />
+  <script type="text/javascript">
+  // <![CDATA[
+
+  function popupCode( url ) {
+    window.open(url, "Code", "resizable=yes,scrollbars=yes,toolbar=no,status=no,height=150,width=400")
+  }
+
+  function toggleCode( id ) {
+    if ( document.getElementById )
+      elem = document.getElementById( id );
+    else if ( document.all )
+      elem = eval( "document.all." + id );
+    else
+      return false;
+
+    elemStyle = elem.style;
+    
+    if ( elemStyle.display != "block" ) {
+      elemStyle.display = "block"
+    } else {
+      elemStyle.display = "none"
+    }
+
+    return true;
+  }
+  
+  // Make codeblocks hidden by default
+  document.writeln( "<style type=\"text/css\">div.method-source-code { display: none }</style>" )
+  
+  // ]]>
+  </script>
+
+</head>
+<body>
+
+
+
+    <div id="classHeader">
+        <table class="header-table">
+        <tr class="top-aligned-row">
+          <td><strong>Class</strong></td>
+          <td class="class-name-in-header">WarehouseController</td>
+        </tr>
+        <tr class="top-aligned-row">
+            <td><strong>In:</strong></td>
+            <td>
+                <a href="../files/app/controllers/warehouse_controller_rb.html">
+                app/controllers/warehouse_controller.rb
+                </a>
+        <br />
+            </td>
+        </tr>
+
+        <tr class="top-aligned-row">
+            <td><strong>Parent:</strong></td>
+            <td>
+                <a href="ApplicationController.html">
+                ApplicationController
+               </a>
+            </td>
+        </tr>
+        </table>
+    </div>
+  <!-- banner header -->
+
+  <div id="bodyContent">
+
+
+
+  <div id="contextContent">
+
+
+
+   </div>
+
+    <div id="method-list">
+      <h3 class="section-bar">Methods</h3>
+
+      <div class="name-list">
+      <a href="#M000073">add_to_basket</a>&nbsp;&nbsp;
+      <a href="#M000074">erase_basket</a>&nbsp;&nbsp;
+      <a href="#M000075">finish_shopping</a>&nbsp;&nbsp;
+      <a href="#M000072">index</a>&nbsp;&nbsp;
+      <a href="#M000076">save_invoice</a>&nbsp;&nbsp;
+      </div>
+    </div>
+
+  </div>
+
+
+    <!-- if includes -->
+
+    <div id="section">
+
+
+
+
+
+      
+
+
+    <!-- if method_list -->
+    <div id="methods">
+      <h3 class="section-bar">Public Instance methods</h3>
+
+      <div id="method-M000073" class="method-detail">
+        <a name="M000073"></a>
+
+        <div class="method-heading">
+          <a href="#M000073" class="method-signature">
+          <span class="method-name">add_to_basket</span><span class="method-args">()</span>
+          </a>
+        </div>
+      
+        <div class="method-description">
+          <p><a class="source-toggle" href="#"
+            onclick="toggleCode('M000073-source');return false;">[Source]</a></p>
+          <div class="method-source-code" id="M000073-source">
+<pre>
+    <span class="ruby-comment cmt"># File app/controllers/warehouse_controller.rb, line 13</span>
+13:   <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">add_to_basket</span>
+14: 
+15:   <span class="ruby-identifier">product</span> = <span class="ruby-constant">Product</span>.<span class="ruby-identifier">find</span>(<span class="ruby-identifier">params</span>[<span class="ruby-identifier">:id</span>])
+16:   <span class="ruby-ivar">@basket</span> = <span class="ruby-identifier">get_basket</span>
+17:   <span class="ruby-ivar">@current_item</span> = <span class="ruby-ivar">@basket</span>.<span class="ruby-identifier">add_product</span>(<span class="ruby-identifier">product</span>)
+18:   
+19:   <span class="ruby-identifier">respond_to</span> <span class="ruby-keyword kw">do</span> <span class="ruby-operator">|</span><span class="ruby-identifier">format</span><span class="ruby-operator">|</span>
+20:         <span class="ruby-identifier">format</span>.<span class="ruby-identifier">js</span> <span class="ruby-keyword kw">if</span> <span class="ruby-identifier">request</span>.<span class="ruby-identifier">xhr?</span>
+21:         <span class="ruby-identifier">format</span>.<span class="ruby-identifier">html</span> {<span class="ruby-identifier">back_to_the_index_page</span>}
+22:     
+23:   <span class="ruby-keyword kw">end</span>
+24: 
+25:   <span class="ruby-keyword kw">rescue</span> <span class="ruby-constant">ActiveRecord</span><span class="ruby-operator">::</span><span class="ruby-constant">RecordNotFound</span>
+26:   <span class="ruby-identifier">logger</span>.<span class="ruby-identifier">error</span>(<span class="ruby-node">&quot;Trying to access the wrong product #{params[:id]}&quot;</span>)
+27:   <span class="ruby-identifier">back_to_the_index_page</span>(<span class="ruby-value str">&quot;Wrong Product&quot;</span>)
+28:  
+29:   <span class="ruby-keyword kw">end</span>
+</pre>
+          </div>
+        </div>
+      </div>
+
+      <div id="method-M000074" class="method-detail">
+        <a name="M000074"></a>
+
+        <div class="method-heading">
+          <a href="#M000074" class="method-signature">
+          <span class="method-name">erase_basket</span><span class="method-args">()</span>
+          </a>
+        </div>
+      
+        <div class="method-description">
+          <p><a class="source-toggle" href="#"
+            onclick="toggleCode('M000074-source');return false;">[Source]</a></p>
+          <div class="method-source-code" id="M000074-source">
+<pre>
+    <span class="ruby-comment cmt"># File app/controllers/warehouse_controller.rb, line 31</span>
+31:   <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">erase_basket</span>
+32: 
+33:   <span class="ruby-identifier">session</span>[<span class="ruby-identifier">:basket</span>] = <span class="ruby-keyword kw">nil</span>
+34: 
+35:   <span class="ruby-identifier">back_to_the_index_page</span>(<span class="ruby-value str">&quot;Your basket has been erased from the session&quot;</span>)
+36:  
+37:  <span class="ruby-keyword kw">end</span>
+</pre>
+          </div>
+        </div>
+      </div>
+
+      <div id="method-M000075" class="method-detail">
+        <a name="M000075"></a>
+
+        <div class="method-heading">
+          <a href="#M000075" class="method-signature">
+          <span class="method-name">finish_shopping</span><span class="method-args">()</span>
+          </a>
+        </div>
+      
+        <div class="method-description">
+          <p><a class="source-toggle" href="#"
+            onclick="toggleCode('M000075-source');return false;">[Source]</a></p>
+          <div class="method-source-code" id="M000075-source">
+<pre>
+    <span class="ruby-comment cmt"># File app/controllers/warehouse_controller.rb, line 40</span>
+40:         <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">finish_shopping</span>
+41:         
+42:          <span class="ruby-ivar">@basket</span> = <span class="ruby-identifier">get_basket</span>  
+43:               
+44:           <span class="ruby-keyword kw">if</span> <span class="ruby-ivar">@basket</span>.<span class="ruby-identifier">items</span>.<span class="ruby-identifier">empty?</span>
+45:         <span class="ruby-identifier">back_to_the_index_page</span>(<span class="ruby-value str">&quot;The shopping basket is now empty&quot;</span>)
+46:               
+47:               <span class="ruby-keyword kw">else</span> 
+48:                <span class="ruby-ivar">@invoice</span> = <span class="ruby-constant">Invoice</span>.<span class="ruby-identifier">new</span>
+49:           <span class="ruby-keyword kw">end</span>
+50:    <span class="ruby-keyword kw">end</span>
+</pre>
+          </div>
+        </div>
+      </div>
+
+      <div id="method-M000072" class="method-detail">
+        <a name="M000072"></a>
+
+        <div class="method-heading">
+          <a href="#M000072" class="method-signature">
+          <span class="method-name">index</span><span class="method-args">()</span>
+          </a>
+        </div>
+      
+        <div class="method-description">
+          <p><a class="source-toggle" href="#"
+            onclick="toggleCode('M000072-source');return false;">[Source]</a></p>
+          <div class="method-source-code" id="M000072-source">
+<pre>
+    <span class="ruby-comment cmt"># File app/controllers/warehouse_controller.rb, line 5</span>
+ 5:   <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">index</span>
+ 6:     
+ 7:     <span class="ruby-ivar">@products</span> = <span class="ruby-constant">Product</span>.<span class="ruby-identifier">find_products_to_be_sold</span>
+ 8:     <span class="ruby-ivar">@basket</span> = <span class="ruby-identifier">get_basket</span>
+ 9:     
+10:   <span class="ruby-keyword kw">end</span>
+</pre>
+          </div>
+        </div>
+      </div>
+
+      <div id="method-M000076" class="method-detail">
+        <a name="M000076"></a>
+
+        <div class="method-heading">
+          <a href="#M000076" class="method-signature">
+          <span class="method-name">save_invoice</span><span class="method-args">()</span>
+          </a>
+        </div>
+      
+        <div class="method-description">
+          <p><a class="source-toggle" href="#"
+            onclick="toggleCode('M000076-source');return false;">[Source]</a></p>
+          <div class="method-source-code" id="M000076-source">
+<pre>
+    <span class="ruby-comment cmt"># File app/controllers/warehouse_controller.rb, line 53</span>
+53:    <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">save_invoice</span>
+54:            <span class="ruby-ivar">@basket</span> = <span class="ruby-identifier">get_basket</span>
+55:            <span class="ruby-ivar">@invoice</span> = <span class="ruby-constant">Invoice</span>.<span class="ruby-identifier">new</span>(<span class="ruby-identifier">params</span>[<span class="ruby-identifier">:invoice</span>])
+56:            <span class="ruby-ivar">@invoice</span>.<span class="ruby-identifier">line_items_from_basket_addition</span>(<span class="ruby-ivar">@basket</span>)
+57: 
+58:         <span class="ruby-keyword kw">if</span> <span class="ruby-ivar">@invoice</span>.<span class="ruby-identifier">save</span>
+59:             <span class="ruby-identifier">session</span>[<span class="ruby-identifier">:basket</span>] = <span class="ruby-keyword kw">nil</span>
+60:             <span class="ruby-identifier">back_to_the_index_page</span>(<span class="ruby-value str">&quot;Your invoice has been processed&quot;</span>)
+61: 
+62:         <span class="ruby-keyword kw">else</span>
+63:             <span class="ruby-identifier">render</span> <span class="ruby-identifier">:action</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-value str">'finish_shopping'</span>
+64:         <span class="ruby-keyword kw">end</span>
+65:   <span class="ruby-keyword kw">end</span>
+</pre>
+          </div>
+        </div>
+      </div>
+
+
+    </div>
+
+
+  </div>
+
+
+<div id="validator-badges">
+  <p><small><a href="http://validator.w3.org/check/referer">[Validate]</a></small></p>
+</div>
+
+</body>
+</html>

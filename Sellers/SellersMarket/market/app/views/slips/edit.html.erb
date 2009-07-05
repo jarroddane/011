@@ -1,0 +1,12 @@
+<h1>Editing slip</h1>
+
+<% form_for(@slip) do |f| %>
+  <%= f.error_messages %>
+
+  <p>
+    <%= f.submit "Update" %>
+  </p>
+<% end %>
+
+<%= link_to 'Show', @slip %> |
+<%= link_to 'Back', slips_path %>

@@ -1,0 +1,37 @@
+<div id="listing-product"> 
+
+<h1>Product Listings</h1> 
+
+<table> 
+
+<% for product in @products %> 
+
+<tr class="<%= cycle('odd-list-line', 'even-list-line') %>"> 
+<td> 
+<%= image_tag product.image_url, :class => 'image-list' %> 
+</td> 
+
+
+
+<td class="list-description"> 
+<dl> 
+<dt><%=h product.label %></dt> 
+<dd><%=h truncate(product.description.gsub(/<.*?>/,''), :length => 60) %></dd> 
+</dl> 
+</td> 
+
+
+<td class="actions-list"> 
+
+<%= link_to 'Show', product %><br/> 
+<%= link_to 'Edit', edit_product_path(product) %><br/> 
+<%= link_to 'Destroy', product, :confirm => 'Confirm?', :method => :delete %> 
+</td> 
+</tr> 
+
+<% end %> 
+</table> 
+</div> 
+<br /> 
+
+<%= link_to 'New product', new_product_path %>

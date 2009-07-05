@@ -1,0 +1,39 @@
+<div class="form-market">
+
+<%= error_messages_for 'invoice' %>
+
+<% form_for :invoice, :url => { :action => :save_invoice } do |form| %>
+
+	<fieldset>
+			<legend> Enter Your Payment Information </legend>
+	<div>
+      <%= form.label :name, "Name -" %>
+	  <%= form.text_field :name, :size => 50 %>
+	</div>
+	
+	<div>
+	  <%= form.label :address, "Address -" %>
+	  <%= form.text_area :address, :rows => 3, :cols => 50 %>
+	</div>
+	
+	
+	<div>
+	  <%= form.label :email, "e-mail -" %>
+	  <%= form.text_field :email, :size => 50 %>
+	</div>
+	
+	<div>
+	<%= form.label :transaction_type, "Payment Type -" %>
+	<%= form.select :transaction_type, Invoice::TRANSACTION_TYPES, :prompt => "Please Choose a Payment Type" %>
+	</div>
+	
+	<br>
+	
+	<%= submit_tag "Make the Transaction", :class => "submit" %>
+	
+	</fieldset>
+	
+	<% end %>
+	
+</div>
+	  

@@ -1,0 +1,696 @@
+
+
+
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+  <head>
+    <meta http-equiv="content-type" content="text/html;charset=UTF-8" />
+        <title>rubyist's aasm at master - GitHub</title>
+    <link rel="search" type="application/opensearchdescription+xml" href="/opensearch.xml" title="GitHub" />
+    <link rel="fluid-icon" href="http://github.com/fluidicon.png" title="GitHub" />
+
+    
+      <link href="http://assets3.github.com/stylesheets/bundle.css?fe6e3b0a5966363f752bebac4b2943b5d827f787" media="screen" rel="stylesheet" type="text/css" />
+    
+
+    
+      
+        <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.3.2/jquery.min.js"></script>
+        <script src="http://assets2.github.com/javascripts/bundle.js?fe6e3b0a5966363f752bebac4b2943b5d827f787" type="text/javascript"></script>
+      
+    
+    
+  
+    
+  
+
+  <link href="http://github.com/feeds/rubyist/commits/aasm/master" rel="alternate" title="Recent Commits to aasm:master" type="application/atom+xml" />
+
+    <meta name="description" content="AASM - State machines for Ruby classes" />
+
+
+    
+
+    <script type="text/javascript">
+      github_user = null
+    </script>
+  </head>
+
+  
+
+  <body>
+    
+
+    <div id="main">
+      <div id="header" class="">
+        <div class="site">
+          <div class="logo">
+            <a href="http://github.com"><img src="/images/modules/header/logov3.png" alt="github" /></a>
+          </div>
+          
+            <div class="topsearch">
+  <form action="/search" id="top_search_form" method="get">
+    <input type="search" class="search" name="q" /> <input type="submit" value="Search" />
+    <input type="hidden" name="type" value="Everything" />
+    <input type="hidden" name="repo" value="" />
+    <input type="hidden" name="langOverride" value="" />
+    <input type="hidden" name="start_value" value="1" />
+  </form>
+  <div class="links">
+    <a href="/repositories">Browse</a> | <a href="/guides">Guides</a> | <a href="/search">Advanced</a>
+  </div>
+</div>
+          
+          
+            <div class="actions">
+              <a href="http://github.com">Home</a>
+              <a href="/plans"><b><u>Pricing and Signup</u></b></a>
+              <a href="http://github.com/popular/forked">Repositories</a>
+              
+              <a href="/blog">Blog</a>
+              <a href="https://github.com/login">Login</a>
+            </div>
+          
+        </div>
+      </div>
+
+      
+        
+    <div id="repo_menu">
+      <div class="site">
+        <ul>
+          
+            <li class="active"><a href="http://github.com/rubyist/aasm/tree/master">Source</a></li>
+
+            <li class=""><a href="http://github.com/rubyist/aasm/commits/master">Commits</a></li>
+
+            
+            <li class=""><a href="/rubyist/aasm/network">Network (65)</a></li>
+
+            
+
+            
+            
+              
+              <li class=""><a href="/rubyist/aasm/issues">Issues (2)</a></li>
+            
+            
+
+            
+              
+              <li class=""><a href="/rubyist/aasm/downloads">Downloads (0)</a></li>
+            
+
+            
+              
+              <li class=""><a href="http://wiki.github.com/rubyist/aasm">Wiki (1)</a></li>
+            
+
+            <li class=""><a href="/rubyist/aasm/graphs">Graphs</a></li>
+
+            
+
+          
+        </ul>
+      </div>
+    </div>
+
+  <div id="repo_sub_menu">
+    <div class="site">
+      <div class="joiner"></div>
+      
+
+      
+
+      
+
+      
+        <ul>
+          <li>
+            <a class="active" href="/rubyist/aasm/tree/master">master</a>
+          </li>
+          <li>
+            <a href="#">all branches</a>
+            <ul>
+              
+                
+                  <li><a href="/rubyist/aasm/tree/master">master</a></li>
+                
+              
+                
+                  <li><a href="/rubyist/aasm/tree/multiplesm">multiplesm</a></li>
+                
+              
+                
+                  <li><a href="/rubyist/aasm/tree/no_aasm_prefix">no_aasm_prefix</a></li>
+                
+              
+                
+                  <li><a href="/rubyist/aasm/tree/smobject">smobject</a></li>
+                
+              
+            </ul>
+          </li>
+          <li>
+            <a href="#">all tags</a>
+            
+          </li>
+        </ul>
+
+      
+    </div>
+  </div>
+
+  <div class="site">
+    
+
+
+
+
+
+
+
+<div id="repos">
+  
+
+
+<script type="text/javascript">
+  GitHub.currentCommitRef = "master"
+  GitHub.currentRepoOwner = "rubyist"
+  GitHub.currentRepo = "aasm"
+</script>
+
+
+
+  <div class="repo public">
+    <div class="title">
+      <div class="path">
+        <a href="/rubyist">rubyist</a> / <b><a href="http://github.com/rubyist/aasm/tree">aasm</a></b>
+
+        
+
+          
+
+          
+            
+
+            
+              
+            
+          
+
+          <a href="/signup" class="toggle_watch"><img alt="watch" class="button" src="http://assets2.github.com/images/modules/repos/watch_button.png?fe6e3b0a5966363f752bebac4b2943b5d827f787" /></a><a href="/signup" class="toggle_watch" style="display:none;"><img alt="watch" class="button" src="http://assets1.github.com/images/modules/repos/unwatch_button.png?fe6e3b0a5966363f752bebac4b2943b5d827f787" /></a>
+
+          
+            <a href="#" id="download_button" rel="rubyist/aasm"><img alt="download tarball" class="button" src="http://assets0.github.com/images/modules/repos/download_button.png?fe6e3b0a5966363f752bebac4b2943b5d827f787" /></a>
+          
+        
+      </div>
+
+      <div class="security private_security" style="display:none">
+        <a href="#private_repo" rel="facebox"><img src="/images/icons/private.png" alt="private" /></a>
+      </div>
+
+      <div id="private_repo" class="hidden">
+        This repository is private.
+        All pages are served over SSL and all pushing and pulling is done over SSH.
+        No one may fork, clone, or view it unless they are added as a <a href="/rubyist/aasm/edit">member</a>.
+
+        <br/>
+        <br/>
+        Every repository with this icon (<img src="/images/icons/private.png" alt="private" />) is private.
+      </div>
+
+      <div class="security public_security" style="">
+        <a href="#public_repo" rel="facebox"><img src="/images/icons/public.png" alt="public" /></a>
+      </div>
+
+      <div id="public_repo" class="hidden">
+        This repository is public.
+        Anyone may fork, clone, or view it.
+
+        <br/>
+        <br/>
+        Every repository with this icon (<img src="/images/icons/public.png" alt="public" />) is public.
+      </div>
+
+      
+        <div class="security" style="margin-right:0.5em;">
+          <a href="#rubygem_install" rel="facebox"><img alt="Rubygem" src="http://assets2.github.com/images/icons/rubygem.png?fe6e3b0a5966363f752bebac4b2943b5d827f787" /></a>
+        </div>
+
+        <div id="rubygem_install" class="hidden">
+          
+            <div>
+              <p>Run the following if you haven't already:</p>
+              <pre>gem sources -a http://gems.github.com</pre>
+            </div>
+            <div>
+              <p>Install the gem(s):</p>
+              
+                <pre>sudo gem install rubyist-aasm</pre>
+              
+            </div>
+          
+          
+        </div>
+      
+
+        <div class="flexipill">
+          <a href="/rubyist/aasm/network">
+          <table cellpadding="0" cellspacing="0">
+            <tr><td><img alt="Forks" src="http://assets3.github.com/images/modules/repos/pills/forks.png?fe6e3b0a5966363f752bebac4b2943b5d827f787" /></td><td class="middle"><span>65</span></td><td><img alt="Right" src="http://assets0.github.com/images/modules/repos/pills/right.png?fe6e3b0a5966363f752bebac4b2943b5d827f787" /></td></tr>
+          </table>
+          </a>
+        </div>
+
+        <div class="flexipill">
+          <a href="/rubyist/aasm/watchers">
+          <table cellpadding="0" cellspacing="0">
+            <tr><td><img alt="Watchers" src="http://assets2.github.com/images/modules/repos/pills/watchers.png?fe6e3b0a5966363f752bebac4b2943b5d827f787" /></td><td class="middle"><span>592</span></td><td><img alt="Right" src="http://assets0.github.com/images/modules/repos/pills/right.png?fe6e3b0a5966363f752bebac4b2943b5d827f787" /></td></tr>
+          </table>
+          </a>
+        </div>
+      </div>
+
+    <div class="meta">
+      <table>
+        
+        
+          <tr>
+            <td class="label">Description:</td>
+            <td>
+              <span id="repository_description" rel="/rubyist/aasm/edit/update" class="">AASM - State machines for Ruby classes</span>
+              
+            </td>
+          </tr>
+        
+
+        
+          
+            <tr>
+              <td class="label">Homepage:</td>
+              <td>
+                
+                  
+                  <a href="http://rubyi.st/aasm">http://rubyi.st/aasm</a>
+                
+              </td>
+            </tr>
+          
+
+          
+            <tr>
+              <td class="label">Clone&nbsp;URL:</td>
+              
+              <td>
+                <a href="git://github.com/rubyist/aasm.git" class="git_url_facebox" rel="#git-clone">git://github.com/rubyist/aasm.git</a>
+                      <object classid="clsid:d27cdb6e-ae6d-11cf-96b8-444553540000"
+              width="110"
+              height="14"
+              class="clippy"
+              id="clippy" >
+      <param name="movie" value="/flash/clippy.swf"/>
+      <param name="allowScriptAccess" value="always" />
+      <param name="quality" value="high" />
+      <param name="scale" value="noscale" />
+      <param NAME="FlashVars" value="text=git://github.com/rubyist/aasm.git">
+      <param name="bgcolor" value="#F0F0F0">
+      <param name="wmode" value="opaque">
+      <embed src="/flash/clippy.swf"
+             width="110"
+             height="14"
+             name="clippy"
+             quality="high"
+             allowScriptAccess="always"
+             type="application/x-shockwave-flash"
+             pluginspage="http://www.macromedia.com/go/getflashplayer"
+             FlashVars="text=git://github.com/rubyist/aasm.git"
+             bgcolor="#F0F0F0"
+             wmode="opaque"
+      />
+      </object>
+
+                <div id="git-clone" style="display:none;">
+                  Give this clone URL to anyone.
+                  <br/>
+                  <code>git clone git://github.com/rubyist/aasm.git </code>
+                </div>
+              </td>
+            </tr>
+          
+          
+          
+
+          
+
+          
+      </table>
+
+      
+        <div class="pledgie">
+          <a href='http://pledgie.com/campaigns/1001'><img alt='Click here to lend your support to: aasm and make a donation at www.pledgie.com !' src='http://www.pledgie.com/campaigns/1001.png?skin_name=chrome' border='0' /></a>
+        </div>
+          </div>
+  </div>
+
+
+
+
+
+
+</div>
+
+
+  <div id="commit">
+    <div class="group">
+        
+  <div class="envelope commit">
+    <div class="human">
+      
+        <div class="message"><pre><a href="/rubyist/aasm/commit/baceb4b53e296cd45ac3acbd5df291e14b2993aa">Ruby 1.9 compat</a> </pre></div>
+      
+
+      <div class="actor">
+        <div class="gravatar">
+          
+          <img alt="" height="30" src="http://www.gravatar.com/avatar/ebf7edb637321689ed77084835e5a790?s=30&amp;d=http%3A%2F%2Fgithub.com%2Fimages%2Fgravatars%2Fgravatar-30.png" width="30" />
+        </div>
+        <div class="name"><a href="/js">js</a> <span>(author)</span></div>
+          <div class="date">
+            <abbr class="relatize" title="2009-02-06 06:49:24">Fri Feb 06 06:49:24 -0800 2009</abbr> 
+          </div>
+      </div>
+  
+      
+        <div class="actor">
+          <div class="gravatar">
+            <img alt="" height="30" src="http://www.gravatar.com/avatar/6993d6b4b6d882f421e1b45ac147f3e0?s=30&amp;d=http%3A%2F%2Fgithub.com%2Fimages%2Fgravatars%2Fgravatar-30.png" width="30" />
+          </div>
+          <div class="name"><a href="/rubyist">rubyist</a> <span>(committer)</span></div>
+          <div class="date"><abbr class="relatize" title="2009-02-06 07:34:41">Fri Feb 06 07:34:41 -0800 2009</abbr></div>
+        </div>
+      
+  
+    </div>
+    <div class="machine">
+      <span>c</span>ommit&nbsp;&nbsp;<a href="/rubyist/aasm/commit/baceb4b53e296cd45ac3acbd5df291e14b2993aa" hotkey="c">baceb4b53e296cd45ac3acbd5df291e14b2993aa</a><br />
+      <span>t</span>ree&nbsp;&nbsp;&nbsp;&nbsp;<a href="/rubyist/aasm/tree/baceb4b53e296cd45ac3acbd5df291e14b2993aa" hotkey="t">f09cddbe46f8d5f8b3ec157af1835ae9626cb277</a><br />
+  
+      
+        <span>p</span>arent&nbsp;
+        
+        <a href="/rubyist/aasm/tree/5aff31982d044cd532751908725b7535af88e93a" hotkey="p">5aff31982d044cd532751908725b7535af88e93a</a>
+      
+  
+    </div>
+  </div>
+
+    </div>
+  </div>
+
+
+
+  
+    <div id="path">
+      <b><a href="/rubyist/aasm/tree">aasm</a></b> / 
+    </div>
+
+    
+      
+
+  <script type="text/javascript">
+    GitHub.currentTreeSHA = "baceb4b53e296cd45ac3acbd5df291e14b2993aa"
+    GitHub.commitSHA = "baceb4b53e296cd45ac3acbd5df291e14b2993aa"
+    GitHub.currentPath = ""
+  </script>
+
+
+<div id="browser">
+  <table cellpadding="0" cellspacing="0">
+    <tr>
+      <th></th>
+      <th>name</th>
+      <th>age</th>
+      <th>
+        <div class="history">
+          <a href="/rubyist/aasm/commits/master/">history</a>
+        </div>
+        message
+      </th>
+    </tr>
+
+    
+
+    
+      <tr class="alt">
+        <td class="icon"> <img alt="file" src="http://assets3.github.com/images/icons/txt.png?add25bbfa82f0b09a209206d69a2366544a9699b" /> </td>
+        <td class="content"> <a href="/rubyist/aasm/blob/baceb4b53e296cd45ac3acbd5df291e14b2993aa/.gitignore" id="5fa449f594a4ff30c93c8fa86d9bb8a321559693">.gitignore</a></td>
+        
+        <td class="age"> <span class="relatize">Wed Jul 09 16:42:04 -0700 2008</span> </td>
+        <td class="message"> <a href="/rubyist/aasm/commit/bf8ed18ed237b1d18af40e97b64fb2df7cd507ac" class="message">Fixing version number in README.rdoc.</a> [<a href="/eric">eric</a>] </td>
+      </tr>
+    
+      <tr class="">
+        <td class="icon"> <img alt="file" src="http://assets3.github.com/images/icons/txt.png?add25bbfa82f0b09a209206d69a2366544a9699b" /> </td>
+        <td class="content"> <a href="/rubyist/aasm/blob/baceb4b53e296cd45ac3acbd5df291e14b2993aa/CHANGELOG" id="65671e6012542d4c0b964b004ec12a099f847074">CHANGELOG</a></td>
+        
+        <td class="age"> <span class="relatize">Mon Jun 23 06:02:21 -0700 2008</span> </td>
+        <td class="message"> <a href="/rubyist/aasm/commit/600bc639d2b19c08557f688c4ec584706ba53e59" class="message">update changelog</a> [<a href="/rubyist">rubyist</a>] </td>
+      </tr>
+    
+      <tr class="alt">
+        <td class="icon"> <img alt="file" src="http://assets3.github.com/images/icons/txt.png?add25bbfa82f0b09a209206d69a2366544a9699b" /> </td>
+        <td class="content"> <a href="/rubyist/aasm/blob/baceb4b53e296cd45ac3acbd5df291e14b2993aa/MIT-LICENSE" id="ccc6a7956c1bb5c88134299028f72f2781134d5c">MIT-LICENSE</a></td>
+        
+        <td class="age"> <span class="relatize">Thu Feb 21 09:54:42 -0800 2008</span> </td>
+        <td class="message"> <a href="/rubyist/aasm/commit/551503d12f14e99ad12e2faf3e6464f619d860a5" class="message">Add .aasm_states method to get a list of all st...</a> [<a href="/rubyist">rubyist</a>] </td>
+      </tr>
+    
+      <tr class="">
+        <td class="icon"> <img alt="file" src="http://assets3.github.com/images/icons/txt.png?add25bbfa82f0b09a209206d69a2366544a9699b" /> </td>
+        <td class="content"> <a href="/rubyist/aasm/blob/baceb4b53e296cd45ac3acbd5df291e14b2993aa/README.rdoc" id="1bfaaa7ee7f0a5f07cd18f6604c697e6aa560949">README.rdoc</a></td>
+        
+        <td class="age"> <span class="relatize">Mon Dec 29 07:05:07 -0800 2008</span> </td>
+        <td class="message"> <a href="/rubyist/aasm/commit/656984f8b2cb219a7b452eb8f3f20e97dab66239" class="message">Fix misleading example which uses a 'new' state...</a> [<a href="/rubyist">rubyist</a>] </td>
+      </tr>
+    
+      <tr class="alt">
+        <td class="icon"> <img alt="file" src="http://assets3.github.com/images/icons/txt.png?add25bbfa82f0b09a209206d69a2366544a9699b" /> </td>
+        <td class="content"> <a href="/rubyist/aasm/blob/baceb4b53e296cd45ac3acbd5df291e14b2993aa/Rakefile" id="dc21a58d207deb0c78abc0ed435169ec8229505e">Rakefile</a></td>
+        
+        <td class="age"> <span class="relatize">Fri Dec 12 07:05:09 -0800 2008</span> </td>
+        <td class="message"> <a href="/rubyist/aasm/commit/81beebd4789f01349e07722b870aa5847b78a3d2" class="message">exclude rcov.rb from rcov report</a> [<a href="/rubyist">rubyist</a>] </td>
+      </tr>
+    
+      <tr class="">
+        <td class="icon"> <img alt="file" src="http://assets3.github.com/images/icons/txt.png?add25bbfa82f0b09a209206d69a2366544a9699b" /> </td>
+        <td class="content"> <a href="/rubyist/aasm/blob/baceb4b53e296cd45ac3acbd5df291e14b2993aa/TODO" id="efeb98cba2615a65bd422c6a9d4a01223abf11f4">TODO</a></td>
+        
+        <td class="age"> <span class="relatize">Sat May 31 15:08:12 -0700 2008</span> </td>
+        <td class="message"> <a href="/rubyist/aasm/commit/3ccbeaca883f7eadf5e80622bf6a48b2c678e280" class="message">Support enter and exit actions on states</a> [<a href="/rubyist">rubyist</a>] </td>
+      </tr>
+    
+      <tr class="alt">
+        <td class="icon"> <img alt="file" src="http://assets3.github.com/images/icons/txt.png?add25bbfa82f0b09a209206d69a2366544a9699b" /> </td>
+        <td class="content"> <a href="/rubyist/aasm/blob/baceb4b53e296cd45ac3acbd5df291e14b2993aa/aasm.gemspec" id="0e8ae535a658455f4ea0cc2f3d6a43b0ba27c807">aasm.gemspec</a></td>
+        
+        <td class="age"> <span class="relatize">Tue Dec 30 06:59:07 -0800 2008</span> </td>
+        <td class="message"> <a href="/rubyist/aasm/commit/5aff31982d044cd532751908725b7535af88e93a" class="message">bump revision</a> [<a href="/rubyist">rubyist</a>] </td>
+      </tr>
+    
+      <tr class="">
+        <td class="icon"> <img alt="file" src="http://assets3.github.com/images/icons/txt.png?add25bbfa82f0b09a209206d69a2366544a9699b" /> </td>
+        <td class="content"> <a href="/rubyist/aasm/blob/baceb4b53e296cd45ac3acbd5df291e14b2993aa/aasm.rb" id="2d025908c5a5f685bddc890b40e033fd1578c120">aasm.rb</a></td>
+        
+        <td class="age"> <span class="relatize">Mon Jan 07 11:11:38 -0800 2008</span> </td>
+        <td class="message"> <a href="/rubyist/aasm/commit/f6a8a34f0627857c51a2d0ab3445f031189d8e07" class="message">Import into git</a> [<a href="/rubyist">rubyist</a>] </td>
+      </tr>
+    
+      <tr class="alt">
+        <td class="icon"> <img alt="directory" src="http://assets2.github.com/images/icons/dir.png?add25bbfa82f0b09a209206d69a2366544a9699b" /> </td>
+        <td class="content"> <a href="/rubyist/aasm/tree/baceb4b53e296cd45ac3acbd5df291e14b2993aa/doc" id="b207e0abc86ad3e33783bf9b79c7b3df694d37ff">doc/</a></td>
+        
+        <td class="age"> <span class="relatize">Thu Feb 21 08:41:56 -0800 2008</span> </td>
+        <td class="message"> <a href="/rubyist/aasm/commit/85baeda50a11b1dae7b970b258618868d279e472" class="message">Prepare rakefile and rake tasks for gem packagi...</a> [<a href="/rubyist">rubyist</a>] </td>
+      </tr>
+    
+      <tr class="">
+        <td class="icon"> <img alt="directory" src="http://assets2.github.com/images/icons/dir.png?add25bbfa82f0b09a209206d69a2366544a9699b" /> </td>
+        <td class="content"> <a href="/rubyist/aasm/tree/baceb4b53e296cd45ac3acbd5df291e14b2993aa/lib" id="e599776da5c8aaeeda91bdd770eea2a9933ba771">lib/</a></td>
+        
+        <td class="age"> <span class="relatize">Fri Feb 06 07:34:41 -0800 2009</span> </td>
+        <td class="message"> <a href="/rubyist/aasm/commit/baceb4b53e296cd45ac3acbd5df291e14b2993aa" class="message">Ruby 1.9 compat
+
+Signed-off-by: Scott Barron &lt;s...</a> [Johan Sørensen] </td>
+      </tr>
+    
+      <tr class="alt">
+        <td class="icon"> <img alt="directory" src="http://assets2.github.com/images/icons/dir.png?add25bbfa82f0b09a209206d69a2366544a9699b" /> </td>
+        <td class="content"> <a href="/rubyist/aasm/tree/baceb4b53e296cd45ac3acbd5df291e14b2993aa/spec" id="41081b82ba03e7fae383837c35102362f75f85af">spec/</a></td>
+        
+        <td class="age"> <span class="relatize">Tue Dec 30 06:54:12 -0800 2008</span> </td>
+        <td class="message"> <a href="/rubyist/aasm/commit/f1748118ba07ccc4eeb35d99ff27bc7f911c6561" class="message">Don't add named_scope if the ActiveRecord objec...</a> [<a href="/joshknowles">joshknowles</a>] </td>
+      </tr>
+    
+  </table>
+</div>
+    
+    
+  
+
+
+
+  
+
+
+
+  <div id="readme" class="announce"><span class="name"></span><div class="wikistyle"><h1>AASM - Ruby state machines</h1>
+<p>
+This package contains AASM, a library for adding finite state machines to
+Ruby classes.
+</p>
+<p>
+AASM started as the acts_as_state_machine plugin but has evolved into a
+more generic library that no longer targets only ActiveRecord models.
+</p>
+<p>
+AASM has the following features:
+</p>
+<ul>
+<li>States
+
+</li>
+<li>Machines
+
+</li>
+<li>Events
+
+</li>
+<li>Transitions
+
+</li>
+</ul>
+<h2>Download</h2>
+<p>
+The latest AASM can currently be pulled from the git repository on github.
+</p>
+<ul>
+<li><a href="http://github.com/rubyist/aasm/tree/master">github.com/rubyist/aasm/tree/master</a>
+
+</li>
+</ul>
+<p>
+A release and a gem are forthcoming.
+</p>
+<h2>Installation</h2>
+<h3>From GitHub hosted gems</h3>
+<pre>
+  % sudo gem sources -a http://gems.github.com # (you only need to do this once)
+  % sudo gem install rubyist-aasm
+</pre>
+<h3>Building your own gems</h3>
+<pre>
+  % rake gem
+  % sudo gem install pkg/aasm-2.0.1.gem
+</pre>
+<h2>Simple Example</h2>
+<p>
+Here&#8217;s a quick example highlighting some of the features.
+</p>
+<pre>
+  class Conversation
+    include AASM
+
+    aasm_initial_state :unread
+
+    aasm_state :unread
+    aasm_state :read
+    aasm_state :closed
+
+    aasm_event :view do
+      transitions :to =&gt; :read, :from =&gt; [:unread]
+    end
+
+    aasm_event :close do
+      transitions :to =&gt; :closed, :from =&gt; [:read, :unread]
+    end
+  end
+</pre>
+<h1>Other Stuff</h1>
+<table>
+<tr><td>Author:</td><td>Scott Barron &lt;scott at elitists dot net&gt;
+
+</td></tr>
+<tr><td>License:</td><td>Copyright 2006, 2007, 2008 by Scott Barron. Released under an MIT-style
+license. See the LICENSE file included in the distribution.
+
+</td></tr>
+<tr><td>Bugs:</td><td><a href="http://rubyist.lighthouseapp.com/projects/13207-aasm">rubyist.lighthouseapp.com/projects/13207-aasm</a>/
+
+</td></tr>
+<tr><td>GitHub:</td><td><a href="http://github.com/rubyist/aasm/tree/master">github.com/rubyist/aasm/tree/master</a>
+
+</td></tr>
+</table>
+<h2>Warranty</h2>
+<p>
+This software is provided &quot;as is&quot; and without any express or
+implied warranties, including, without limitation, the implied warranties
+of merchantibility and fitness for a particular purpose.
+</p>
+</div></div>
+
+  </div>
+
+      
+
+      <div class="push"></div>
+    </div>
+
+    <div id="footer">
+      <div class="site">
+        <div class="info">
+          <div class="links">
+            <a href="http://github.com/blog/148-github-shirts-now-available">Shirts</a> |
+            <a href="http://github.com/blog">Blog</a> |
+            <a href="http://support.github.com/">Support</a> |
+            <a href="http://github.com/training">Training</a> |
+            <a href="http://github.com/contact">Contact</a> |
+            <a href="http://groups.google.com/group/github/">Google Group</a> |
+            <a href="http://develop.github.com">API</a> |
+            <a href="http://twitter.com/github">Status</a>
+          </div>
+          <div class="company">
+            <span id="_rrt" title="0.05536s from xc88-s00011">GitHub</span>&trade;
+            is <a href="http://logicalawesome.com/">Logical Awesome</a> &copy;2009 | <a href="/site/terms">Terms of Service</a> | <a href="/site/privacy">Privacy Policy</a>
+          </div>
+        </div>
+        <div class="sponsor">
+          <a href="http://engineyard.com"><img src="/images/modules/footer/ey-rubyhosting.png" alt="Engine Yard" /></a>
+        </div>
+      </div>
+    </div>
+
+    <div id="coming_soon" style="display:none;">
+      This feature is coming soon.  Sit tight!
+    </div>
+
+    
+        <script type="text/javascript">
+    var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+    document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+    </script>
+    <script type="text/javascript">
+    var pageTracker = _gat._getTracker("UA-3769691-2");
+    pageTracker._initData();
+    pageTracker._trackPageview();
+    </script>
+
+    
+  </body>
+</html>
+

@@ -1,0 +1,33 @@
+<div class="form-market">
+
+<%= error_messages_for :customer %>
+
+<fieldset> Enter Your Customer Credentials
+<legend> Enter Your Customer Credentails </legend>
+
+
+<% form_for(@customer) do |f| %>
+
+<p> 
+<label for="name_of_customer">Name:</label> 
+<%= f.text_field :name, :size => 40 %> 
+</p> 
+
+<p> 
+<label for="customers_password">Password:</label> 
+<%= f.password_field :password, :size => 40 %> 
+</p> 
+
+<p> 
+<label for="confirm_password_for_customer">Confirm:</label> 
+<%= f.password_field :confirm_password, :size => 40 %> 
+</p> 
+
+<p> 
+<%= f.submit "Add New Customer Info", :class => "submit" %> 
+</p> 
+
+<% end %>
+
+</fieldset> 
+</div>

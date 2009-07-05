@@ -1,0 +1,23 @@
+<p>
+  <b>Product:</b>
+  <%=h @line_item.product_id %>
+</p>
+
+<p>
+  <b>Invoice:</b>
+  <%=h @line_item.invoice_id %>
+</p>
+
+<p>
+  <b>Quantity:</b>
+  <%=h @line_item.quantity %>
+</p>
+
+<p>
+  <b>Price sum:</b>
+  <%=h @line_item.price_sum %>
+</p>
+
+
+<%= link_to 'Edit', edit_line_item_path(@line_item) %> |
+<%= link_to 'Back', line_items_path %>

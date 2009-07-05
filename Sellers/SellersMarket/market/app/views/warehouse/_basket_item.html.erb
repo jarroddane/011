@@ -1,0 +1,14 @@
+<% if basket_item == @current_item %>
+   <tr id="current_item">
+
+<% else %>
+
+   <tr> 
+
+<% end %>
+
+<td><%= basket_item.quantity %>&times;</td>
+<td><%=h basket_item.label %></td>
+<td class="price-label"><%= number_to_currency(basket_item.price) %></td>
+
+</tr>

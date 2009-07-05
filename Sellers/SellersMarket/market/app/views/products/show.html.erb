@@ -1,0 +1,28 @@
+<p>
+  <b>Label:</b>
+  <%=h @product.label %>
+</p>
+
+<p>
+  <b>Description:</b>
+  <%=h @product.description %>
+</p>
+
+<p>
+  <b>Image url:</b>
+  <%=h @product.image_url %>
+</p>
+
+<p>
+  <b>Video url:</b>
+  <%=h @product.video_url %>
+</p>
+
+<p> 
+	<b>Price:</b> 
+	<%=h @product.price %> 
+</p>
+
+
+<%= link_to 'Edit', edit_product_path(@product) %> |
+<%= link_to 'Back', products_path %>

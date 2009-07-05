@@ -1,0 +1,106 @@
+ <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" 
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd"> 
+ <html> 
+ <head> 
+
+ <title>The Sellers Market</title> 
+
+ <!-- START Cascading Stylesheet Implementation-->
+ <%= stylesheet_link_tag "market", :media => "all" %> 
+ <!-- END Cascading Stylesheet Implementation-->
+ 
+ <!-- START_JavaScripting -->
+ <%= javascript_include_tag :defaults %>
+ <!-- END of JavaScripting -->
+ 
+</head> 
+
+ <body id="warehouse"> 
+
+ <div id="logo"> 
+ <%= image_tag("market_logo.gif") %> 
+ <%= @page_label || "" %> 
+ </div> 
+
+ <div id="columns"> 
+	
+	<div id="rows">
+
+
+	<div id="top-links">
+	 <a href="http://localhost:3000/products">Main-Page</a> 
+	 <a href="http://localhost:3000/services">Services</a>
+	 <a href="http://localhost:3000/news">News</a>
+     <a href="http://localhost:3000/events">Events</a>
+	 <a href="http://localhost:3000/support">Support</a>
+	 <a href="http://localhost:3000/contact">Contact-Us</a>
+	 <a href="http://localhost:3000/links">Links</a>
+	</div>
+	
+	</div>
+	
+	
+ <div id="side-basket"> 
+	
+	<div id="login-area">
+		<a href="http://localhost:3000/users/new">Login Area</a>
+		
+		</div>
+	
+	
+	<div id="login-area">
+	
+	</div>
+	
+	<% div_disappear_if(@basket.items.empty?, :id => "basket") do %>
+	   <%= render(:partial => "basket", :object => @basket) %>
+	<% end %>
+
+	
+ </div> 
+
+	
+	<div align="right" color="white">
+		<div>
+		
+		
+		<div id="warehouse-top-area-wrapper" align="left">
+	
+		
+			<div id="warehouse-top-area-1" align="top">
+	
+		
+				SEARCH
+			
+	
+	
+	
+		<input align="right" type="text/submit/hidden/button" name="some_name" value="" id="some_name" width="100%">
+
+			
+			</div>
+	
+	
+				</div>
+
+	
+				</div>
+</div>
+
+ <div id="main"> 
+	
+	<% if flash[:notice] -%>
+	
+	<div id="alert"><%= flash[:notice] %></div>
+	
+	<% end -%>
+
+ <%= yield :layout %> 
+
+ </div> 
+
+ </div> 
+
+ </body> 
+
+ </html>

@@ -1,0 +1,90 @@
+ <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" 
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd"> 
+ <html> 
+ <head> 
+
+ <title>The Sellers Market</title> 
+
+ <!-- START Cascading Stylesheet Implementation-->
+ <%= stylesheet_link_tag "market", :media => "all" %> 
+ <!-- END Cascading Stylesheet Implementation-->
+ 
+ <!-- START_JavaScripting -->
+ <%= javascript_include_tag :defaults %>
+ <!-- END of JavaScripting -->
+ 
+</head> 
+
+ <body id="shippings"> 
+
+ <div id="logo"> 
+ <%= image_tag("market_logo.gif") %> 
+ <%= @page_label || "" %> 
+ </div> 
+
+ <div id="columns"> 
+	
+	<div id="rows">
+
+
+	<div id="top-links">
+	 <a href="http://localhost:3000/products">Main-Page</a> 
+	 <a href="http://localhost:3000/services">Services</a>
+	 <a href="http://localhost:3000/news">News</a>
+     <a href="http://localhost:3000/events">Events</a>
+	 <a href="http://localhost:3000/support">Support</a>
+	 <a href="http://localhost:3000/contact">Contact-Us</a>
+	 <a href="http://localhost:3000/links">Links</a>
+	</div>
+	
+	</div>
+	
+	
+	
+	<div id="side-bar-wrapper-shippings">
+	
+	<div id="side-bar-shippings">
+		
+		
+	<a href="/shippings/"> Show All Shippings</a>
+	
+	<a href="/shippings/new/"> Ship a New Product</a>
+
+		
+		
+		</div>
+	
+	</div>
+
+
+	
+	<div align="right" color="white">
+		<div>
+		
+		
+		<div id="left-top-bar" align="left">
+				<a speak="normal" href="/shippings/update/1"> Add 4 to 5 Clickable Icons Here and hook up some Script.aculo.us JavaScript Visual Effects.  This will give the web app a new appeal on the design front and also inspire the layout of this Shipping and Receiving section.  This paragraph link, links to the shippings/update/1 model, just to test out some functionality and also inspire a few ideas.  Put the rollover objects to the left and hook some events and event handlers to them.  Everytime a user hovers over an object, display information in this area.</a>
+		</div>
+		
+		<a speak="normal" href="http://api.rubyonrails.org"> Powered by Rails 2.2</a>
+		<%= image_tag("rails.png") %> 
+		</div>
+</div>
+
+ <div id="main"> 
+	
+	<% if flash[:notice] -%>
+	
+	<div id="alert"><%= flash[:notice] %></div>
+	
+	<% end -%>
+
+ <%= yield :layout %> 
+
+ </div> 
+
+ </div> 
+
+ </body> 
+
+ </html>

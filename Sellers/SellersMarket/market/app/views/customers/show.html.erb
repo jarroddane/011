@@ -1,0 +1,18 @@
+<p>
+  <b>Name:</b>
+  <%=h @customer.name %>
+</p>
+
+<p>
+  <b>Hashed password:</b>
+  <%=h @customer.hashed_password %>
+</p>
+
+<p>
+  <b>Salt:</b>
+  <%=h @customer.salt %>
+</p>
+
+
+<%= link_to 'Edit', edit_customer_path(@customer) %> |
+<%= link_to 'Back', customers_path %>

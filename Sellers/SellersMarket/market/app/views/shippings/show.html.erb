@@ -1,0 +1,33 @@
+
+<div align="center">
+
+<p>
+  <b>Name:</b>
+  <%=h @shipping.name %>
+</p>
+
+<p>
+  <b>Location:</b>
+  <%=h @shipping.location %>
+</p>
+
+<p>
+  <b>Cost:</b>
+  <%=h @shipping.cost %>
+</p>
+
+<p>
+  <b>Shipped:</b>
+  <%=h @shipping.shipped %>
+</p>
+
+<p>
+  <b>Received:</b>
+  <%=h @shipping.received %>
+</p>
+
+
+<%= link_to 'Edit', edit_shipping_path(@shipping) %> |
+<%= link_to 'Back', shippings_path %>
+
+</div>

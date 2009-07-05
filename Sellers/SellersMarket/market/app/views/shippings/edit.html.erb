@@ -1,0 +1,32 @@
+<h1>Editing shipping</h1>
+
+<% form_for(@shipping) do |f| %>
+  <%= f.error_messages %>
+
+  <p>
+    <%= f.label :name %><br />
+    <%= f.text_field :name %>
+  </p>
+  <p>
+    <%= f.label :location %><br />
+    <%= f.text_field :location %>
+  </p>
+  <p>
+    <%= f.label :cost %><br />
+    <%= f.text_field :cost %>
+  </p>
+  <p>
+    <%= f.label :shipped %><br />
+    <%= f.date_select :shipped %>
+  </p>
+  <p>
+    <%= f.label :received %><br />
+    <%= f.date_select :received %>
+  </p>
+  <p>
+    <%= f.submit "Update" %>
+  </p>
+<% end %>
+
+<%= link_to 'Show', @shipping %> |
+<%= link_to 'Back', shippings_path %>

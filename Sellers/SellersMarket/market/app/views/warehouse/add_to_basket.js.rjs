@@ -1,0 +1,8 @@
+page.select("div#notice").each { |div| div.hide }
+
+page.replace_html("basket", :partial => "basket", :object => @basket)
+
+page[:basket].visual_effect :bind_down if @basket.price_sum == 1
+
+page[:current_item].visual_effect :highlight, :startcolor => "#FF9342", :endcolor => "#EFCDA6"
+

@@ -1,0 +1,12 @@
+<h1>Editing company_status</h1>
+
+<% form_for(@company_status) do |f| %>
+  <%= f.error_messages %>
+
+  <p>
+    <%= f.submit "Update" %>
+  </p>
+<% end %>
+
+<%= link_to 'Show', @company_status %> |
+<%= link_to 'Back', company_statuses_path %>

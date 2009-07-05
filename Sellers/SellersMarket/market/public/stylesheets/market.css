@@ -1,0 +1,621 @@
+/* Global styles */ 
+
+a { color: #FF4214; font-size: 18px;}
+a:visited { color: #666; }
+a:hover { color: #fff; background-color:#174D76; }
+
+#alert { 
+border: 2px solid red; 
+padding: 1em; 
+margin-bottom: 2em; 
+background-color: #f0f0f0; 
+font: bold smaller sans-serif; 
+width: 30%;
+} 
+
+h1 { 
+font: 200% bold sans-serif; 
+color: #226; 
+border-top: 5px #77d;
+border-bottom: 5px #77d;
+text-align: center;
+}
+
+/* Styles for products/index */ 
+#listing-product table { 
+border-collapse: collapse; 
+} 
+
+#listing-product table tr td { 
+padding: 10px; 
+vertical-align: bottom; 
+} 
+
+#listing-product .image-list { 
+width: 60px; 
+height: 70px; 
+padding: 10px;
+} 
+
+#listing-product .list-description { 
+width: 50%; 
+} 
+
+#listing-product .list-description dl { 
+margin: 0; 
+} 
+
+#product-list .list-description dt { 
+color: #244; 
+font-weight: bold; 
+font-size: larger; 
+} 
+
+#listing-product .list-description dd { 
+margin: 0; 
+} 
+
+#listing-product .actions-list { 
+font-size: x-small; 
+text-align: left; 
+padding-left: 1em; 
+} 
+
+#product-list .even-list-line { 
+background: #e0f8f8; 
+} 
+
+#product-list .odd-list-line { 
+background: #f8b0f8; 
+} 
+
+
+/* Styles for main page */ 
+#logo { 
+background: #184D76; 
+padding-top: 10px; 
+padding-left: 33%;
+padding-right: 30px;
+padding-bottom: 10px; 
+border-bottom: 2px solid; 
+font: small-caps 40px/40px "Times New Roman", serif; 
+color: #FF9342; 
+text-align: center; 
+height: 90px;
+} 
+
+#logo img { 
+float: left; 
+} 
+
+#columns { 
+background: #184D76; 
+font-color: #4444AA;
+} 
+
+#rows {
+padding: 10px;
+margin: 1px;
+background: lightyellow;
+font-color: #4444AA;
+text-align: center;
+line-height: 100%;
+word-spacing: 10px;
+}
+
+#main { 
+margin-left: 13em; 
+padding-top: 4ex; 
+padding-bottom: 4ex;
+padding-left: 2em; 
+border-style: solid;
+border-color: #184D76;
+background: white; 
+} 
+
+#main h1 { 
+background: lightyellow; 
+text-align: left;
+width: 55%;
+}
+
+
+
+#new-main-shippings h1 { 
+text-align: left;
+margin-left: 1em; 
+padding-top: 4ex; 
+padding-left: .2em; 
+background: white; 
+} 
+
+#new-main-shippings {
+background: yellow; 
+text-align: right;
+}
+
+
+#side { 
+float: left; 
+padding-top: 1em; 
+padding-left: 1em; 
+padding-bottom: 1em; 
+width: 12em; 
+background: #FF9342; 
+} 
+
+#side a { 
+color: #184D76; 
+font-size: medium; 
+} 
+
+#side-basket { 
+float: left; 
+padding-top: 1em; 
+padding-left: 1em; 
+padding-bottom: 1em; 
+width: 12em; 
+background: #FF4214; 
+}
+
+#login-area { 
+float: left; 
+padding-top: 1em; 
+padding-left: 1em; 
+padding-bottom: 1em; 
+width: 12em; 
+background: lightyellow; 
+}
+
+
+/* The display for the warehouse views body content */
+
+#warehouse .display {
+overflow: auto; 
+margin-top: 1em; 
+border-bottom: 1px #77d;	
+		
+}
+
+/* These styles will control the flow and size of content in the warehouse catalog */ 
+#warehouse .display { 
+overflow: auto; 
+margin-top: 1em; 
+border-bottom: 1px #77d; 
+width: 50%;
+
+} 
+
+#warehouse .title { 
+font-size: 120%; 
+font-family: arial; 
+height: 100px;
+padding-top: 20px;
+} 
+
+#warehouse .display img { 
+padding: 5px;
+margin: 5px;
+width: 50px; 
+float: left; 
+} 
+
+#warehouse .display h3 { 
+margin-top: 0; 
+margin-bottom: 2px; 
+color: #227; 
+} 
+
+#warehouse .display p { 
+margin-top: .50em; 
+margin-bottom: 1em; 
+} 
+
+#warehouse .display .line-price { 
+clear: both; 
+} 
+
+#warehouse .display .add-to-basket{ 
+position: relative; 
+} 
+
+#warehouse .display .price { 
+color: #44a; 
+font-weight: bold; 
+margin-right: 2em; 
+} 
+
+#warehouse .display form, #warehouse .display form div {
+display: inline;
+} 
+
+
+
+/* An entry in the warehouse catalog */ 
+#warehouse .entry { 
+overflow: auto; 
+margin-top: 1em; 
+border-bottom: 1px #77d; 
+} 
+
+#warehouse .title { 
+font-size: 120%; 
+font-family: arial; 
+height: 100px;
+padding-top: 20px;
+} 
+
+#warehouse .entry img { 
+padding: 5px;
+margin: 5px;
+width: 75px; 
+float: left; 
+} 
+
+#warehouse .entry h3 { 
+margin-top: 0; 
+margin-bottom: 2px; 
+color: #227; 
+} 
+
+#warehouse .entry p { 
+margin-top: .50em; 
+margin-bottom: 1em; 
+} 
+
+#warehouse .entry .line-price { 
+clear: both; 
+} 
+
+#warehouse .entry .add-to-basket{ 
+position: relative; 
+} 
+
+#warehouse .entry .price { 
+color: #44a; 
+font-weight: bold; 
+margin-right: 2em; 
+} 
+
+#warehouse .entry form, #warehouse .entry form div {
+display: inline;
+} 
+
+
+
+/* Shippings CSS Styles Section */
+#side-bar-wrapper-shippings {
+padding: .25em;	
+width: 10em;
+	
+	
+	
+}
+
+#side-bar-shippings {
+
+float: left; 
+padding-top: 15em; 
+padding-left: 1em; 
+padding-bottom: 1em; 
+width: 110%; 
+background: lightyellow;
+border: solid;
+border-color: orange;	
+		
+}
+
+#shippings-index-body-wrapper {
+letter-spacing: .1em;
+word-spacing: .2em;
+border: solid;
+border-color: orange;
+background-color: lightyellow;
+color: green;	
+	
+}
+
+/* An entry in the shipping and receiving area */ 
+
+#shippings h1 {
+text-align: center;	
+	
+}
+
+#shippings .entry { 
+overflow: auto; 
+margin-top: 1em; 
+border-bottom: 1px #77d; 
+} 
+
+
+#shippings .title { 
+font-size: 120%; 
+font-family: arial; 
+height: 100px;
+padding-top: 20px;
+} 
+
+#shippings .entry img { 
+padding: 5px;
+margin: 5px;
+width: 75px; 
+float: left; 
+} 
+
+#shippings .entry h3 { 
+margin-top: 0; 
+margin-bottom: 2px; 
+color: #227; 
+} 
+
+#shippings .entry p { 
+margin-top: .50em; 
+margin-bottom: 1em; 
+} 
+
+#shippings .entry .line-price { 
+clear: both; 
+} 
+
+#shippings .entry .add-to-basket{ 
+position: relative; 
+} 
+
+#shippings .entry .price { 
+color: #44a; 
+font-weight: bold; 
+margin-right: 2em; 
+} 
+
+#shippings .entry form, #shippings .entry form div {
+display: inline;
+}
+
+
+/* Styles for the cart in the main page */ 
+.label-shopping-basket{ 
+padding-top: 5em;
+font: 120% bold; 
+} 
+
+.item-price, .line-sum { 
+text-align: right; 
+} 
+
+.total-line .cell-sum { 
+font-weight: bold; 
+border-top: 1px solid #595; 
+} 
+
+
+margin-bottom: 10px; 
+} 
+
+
+/* Styles for User Login Form */
+
+
+.form-user {
+background: lightyellow;
+	
+}
+
+
+.form-user fieldset { 
+float: center;
+text-align: left;
+background: #efe; 
+width: 50%;
+
+} 
+
+.form-user legend { 
+color: #FF4214; 
+background: #184D76; 
+font-family: sans-serif;
+font-size: 18px; 
+padding: 0.2em 0.2em; 
+} 
+
+.form-user label { 
+width: 5em; 
+float: left; 
+text-align: right; 
+padding-top: 0.2em; 
+margin-right: 0.1em; 
+display: block; 
+} 
+
+.form-user select, .form-market textarea, .form-market input { 
+margin-left: 0.5em; 
+} 
+
+.form-user .submit { 
+margin-left: 8em; 
+} 
+
+.form-user div { 
+margin: 0.5em 0; 
+} 
+
+
+/* Styles for order form */ 
+.form-market fieldset { 
+background: #efe; 
+} 
+
+.form-market legend { 
+color: #FF4214; 
+background: #184D76; 
+font-family: sans-serif;
+font-size: 18px; 
+padding: 0.2em 0.2em; 
+} 
+
+.form-market label { 
+width: 5em; 
+float: left; 
+text-align: right; 
+padding-top: 0.2em; 
+margin-right: 0.1em; 
+display: block; 
+} 
+
+.form-market select, .form-market textarea, .form-market input { 
+margin-left: 0.5em; 
+} 
+
+.form-market .submit { 
+margin-left: 8em; 
+} 
+
+.form-market div { 
+margin: 0.5em 0; 
+} 
+
+#right-top-bar {
+color: black;
+text-align: right;	
+
+}
+
+#left-top-bar {
+margin: 20px;
+border-top: 10px;
+width: 50%;
+	
+}
+
+#warehouse-top-area-wrapper {
+text-align: left;
+float: right;
+padding-right: 4px;
+margin: 20px;
+border-color: #FF4214;
+border-style: solid;
+width: 35%;
+color: purple;
+
+	
+}
+
+
+#warehouse-top-area-1 {
+margin: 20px;
+border-top: 5px;
+border-style: solid;
+border-color: purple;
+float: right;
+width: 50%;
+color: purple;
+	
+}
+
+#center-header {
+align: center;	
+	
+	
+}
+
+/* Interactive Button Styles */
+
+#top-button-area {
+padding: 4px;
+margin-left: 50px;	
+	
+	
+	
+} 
+
+/*  List Options Styles */
+
+#list_options {
+	
+	
+	
+}
+
+#group_paginate {
+	
+	
+	
+	
+}
+
+
+/* The error box */ 
+.fieldWithErrors { 
+padding: 2px; 
+background-color: yellow; 
+} 
+
+.fieldWithErrors * { 
+background-color: yellow; 
+} 
+#errorExplanation { 
+width: 800px; 
+border: 2px solid red; 
+padding: 9px; 
+padding-bottom: 12px; 
+
+
+/* Styles for the shopping basket in the sidebar */ 
+#shopping-basket, #shopping-basket table { 
+font-size: smaller; 
+color: white; 
+} 
+
+#shopping-basket table { 
+border-top: 1px #595; 
+border-bottom: 1px #595; 
+margin-bottom: 20px; 
+background-color: #f0f0f0; 
+} 
+
+#top-links, #top-links table { 
+font-size: smaller; 
+font-color: #4444AA;
+color: white; 
+background-color: white; 
+} 
+
+#top-links table { 
+font-color: #4444AA;
+border-top: 1px #595; 
+border-bottom: 1px #595; 
+margin-bottom: 20px; 
+background-color: white; 
+}
+
+
+
+#errorExplanation h2 { 
+text-align: left; 
+font-weight: bold; 
+padding: 5px 5px 5px 15px; 
+font-size: 12px; 
+margin: -7px; 
+background-color: #c00; 
+color: #fff; 
+} 
+
+#errorExplanation p { 
+color: #333; 
+margin-bottom: 0; 
+padding: 5px; 
+} 
+
+#errorExplanation ul li { 
+font-size: 12px; 
+list-style: square; 
+} 
+
+.locale { 
+float:right; 
+padding-top: 0.2em 
+} 
+
+
+
+
